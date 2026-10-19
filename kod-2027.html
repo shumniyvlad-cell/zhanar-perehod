@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Твой 2027 по дате рождения — бесплатный расчёт · Жанар Сулейменова</title>
+  <meta name="description" content="Бесплатный мини-расчёт: введи дату рождения и узнай своё число дня, сильную сторону и главный вопрос на 2027 год.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Твой 2027 по дате рождения: бесплатный расчёт">
+  <meta property="og:description" content="Число дня рождения, твоя сила и главный вопрос на 2027 год. Расчёт идёт прямо в браузере.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="theme-color" content="#2F4A3A">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Жанар Сулейменова<small>цифровой психолог и наставник</small></a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="index.html#method">Метод</a>
+      <a href="index.html#products">Продукты</a>
+      <a href="razpakovka.html">Распаковка</a>
+      <a href="kod-2027.html" aria-current="page">Бесплатный расчёт</a>
+    </nav>
+    <a class="btn btn--ghost btn--small" data-bot="site_calc">Telegram-бот</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Тексты чисел 1–9 — ЧЕРНОВИК, утверждает Жанар (assets/app.js, объект NUMBERS). -->
+  <section class="offer-hero">
+    <div class="wrap">
+      <h1>Твой 2027 по дате рождения</h1>
+      <p class="lead" style="margin-top:22px">Бесплатный мини-расчёт: введи дату рождения и узнай своё число дня. Это первая ступень цифровой психологии: твоя сильная сторона, где ты чаще всего застреваешь, и главный вопрос на 2027 год.</p>
+
+      <form class="calc" id="calc-form" novalidate>
+        <label for="birth">Дата рождения</label>
+        <div class="row">
+          <input id="birth" name="birth" type="text" inputmode="numeric" autocomplete="bday" placeholder="ДД.ММ.ГГГГ" maxlength="10" aria-describedby="calc-hint calc-error">
+          <button class="btn btn--primary" type="submit">Рассчитать</button>
+        </div>
+        <p class="hint" id="calc-hint">Дата не сохраняется и никуда не отправляется: расчёт идёт прямо в браузере.</p>
+        <p class="error" id="calc-error" role="alert" hidden></p>
+      </form>
+
+      <div class="result" id="result" aria-live="polite">
+        <div class="result-head">
+          <div class="result-num" id="r-num">1</div>
+          <div>
+            <div class="result-title" id="r-name">Лидер</div>
+            <div class="result-calc" id="r-calc"></div>
+          </div>
+        </div>
+        <dl>
+          <div><dt>Твоя сила</dt><dd id="r-power"></dd></div>
+          <div><dt>Где ты застреваешь</dt><dd id="r-stuck"></dd></div>
+          <div><dt>Вопрос на 2027 год</dt><dd id="r-q"></dd></div>
+        </dl>
+        <p class="next">Это короткая версия. Полную расшифровку твоего числа и аудио от Жанар пришлёт бот в Telegram.</p>
+        <div class="actions">
+          <a class="btn btn--primary" id="r-bot" href="https://t.me/perehod_zhanar_bot?start=site_calc" target="_blank" rel="noopener">Получить полный разбор в Telegram</a>
+          <a class="btn btn--ghost" data-bot="kod2027">«Код 2027» за 4 900 ₸</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" aria-labelledby="kod-title">
+    <div class="wrap split">
+      <div>
+        <h2 id="kod-title">«Код 2027»: твой год по месяцам</h2>
+        <p class="lead">Прогноз года для твоего числа от Жанар. Не общий гороскоп, а разбор твоих задач и точек роста на каждый месяц.</p>
+        <div class="actions">
+          <a class="btn btn--primary" data-bot="kod2027">Получить в Telegram за 4 900 ₸</a>
+        </div>
+        <p class="hint" style="margin-top:14px;color:var(--ink-soft);font-size:.92rem">В первые 48 часов после расчёта в боте — 3 900 ₸.</p>
+      </div>
+      <div class="map-card">
+        <h3>Что внутри</h3>
+        <dl>
+          <div><dt>Тема каждого месяца</dt><dd>На чём сосредоточиться и что важно не упустить.</dd></div>
+          <div><dt>Где рост и где проверки</dt><dd>Периоды для решений и запусков и периоды, когда лучше притормозить.</dd></div>
+          <div><dt>Практика месяца</dt><dd>Короткое действие, которое помогает прожить месяц в ресурсе.</dd></div>
+          <div><dt>Формат</dt><dd>Аудио от Жанар и PDF, приходят в Telegram сразу после оплаты.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="deeper-title">
+    <div class="wrap narrow">
+      <h2 id="deeper-title">Хочешь глубже?</h2>
+      <p class="lead">Число дня рождения — одна цифра из полной картины личности. Целиком она собирается на распаковке: 90 минут в Zoom, твой запрос и личная карта с тремя шагами.</p>
+      <div class="actions">
+        <a class="btn btn--ghost" href="razpakovka.html">Узнать о распаковке</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Жанар Сулейменова</h3>
+        <p>Цифровой психолог и наставник. Помогаю понять себя, разобраться в том, что мешает, и найти путь к желаемым изменениям.</p>
+      </div>
+      <div>
+        <h3>Страницы</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="razpakovka.html">Распаковка личности</a></li>
+          <li><a href="intensiv.html">Интенсив «Переход в 2027»</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Связь</h3>
+        <ul class="footer-links">
+          <li><a data-wa="Здравствуйте, Жанар! Пишу с сайта.">WhatsApp: +7 747 618 29 71</a></li>
+          <li><a href="https://www.instagram.com/pro.zhanar.suleimenova/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@sanacenter8" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://t.me/+rRbYb-FqpjgyZWMy" target="_blank" rel="noopener">Telegram-канал «Переход»</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Расчёт по дате рождения — инструмент самоисследования, а не предсказание судьбы. Консультации не являются медицинской или психотерапевтической помощью. © <span data-year>2026</span> Жанар Сулейменова.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
